@@ -1,8 +1,7 @@
 
-$links: hsl(228, 45%, 44%);
-
 $background-gradient-light: hsl(214, 47%, 23%);
 $background-gradient-dark: hsl(237, 49%, 15%);
+$on-background: white;
 $header: transparent;
 $header-outline: hsl(217, 16%, 45%);
 $on-header: white;
@@ -11,7 +10,7 @@ $on-surface: hsl(229, 25%, 31%);
 $on-surface-variant: hsl(229, 64%, 46%);
 $button-outline: white;
 $on-button: white;
-
+$links: hsl(228, 45%, 44%);
 
 $scissors-gradient-dark: hsl(39, 89%, 49%);
 $scissors-gradient-light: hsl(40, 84%, 53%);
@@ -24,5 +23,15 @@ $lizard-gradient-dark: hsl(261, 72%, 63%);
 $spock-gradient: hsl(189, 59%, 53%);
 $spock-gradient: hsl(189, 58%, 57%);
 
+body
+{
+    background-image: radial-gradient(
+        circle farthest-corner at top,
+        $background-gradient-light,
+        $background-gradient-dark
+        );
+    background-repeat: no-repeat;
+    color: $on-background;
+}
 
 a { color: $links; }

@@ -1,4 +1,6 @@
 
 @use 'scss/colors.scss';
 @use 'scss/typography.scss';
-@use 'scss/layout.scss'
+@use 'scss/layout.scss';
+
+html { height: 100%; }
