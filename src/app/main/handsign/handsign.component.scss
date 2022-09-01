@@ -1,0 +1,90 @@
+@use '/src/scss/colors.scss';
+
+
+:host
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+@mixin handsign-icon( $handsign )
+{
+    background-color: colors.$surface;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+
+    box-shadow: inset 0 0.5rem 0 0.05rem rgba(0, 0, 0, 0.2);
+
+        @if
+    $handsign == rock {
+        background-image: url("/assets/icon-rock.svg");
+        } @else if
+    $handsign == paper {
+        background-image: url("/assets/icon-paper.svg");
+        } @else if
+    $handsign == scissors {
+        background-image: url("/assets/icon-scissors.svg");
+        } @else if
+    $handsign == lizard {
+        background-image: url("/assets/icon-lizard.svg");
+        } @else if
+    $handsign == spock {
+        background-image: url("/assets/icon-spock.svg");
+        }
+}
+
+@mixin handsign( $handsign )
+{
+    height: 70%;
+    width: 70%;
+    padding: 15%;
+    border-radius: 50%;
+
+    box-shadow: inset 0 -0.5rem 0 0.05rem rgba(0, 0, 0, 0.2);
+    &:hover, &:hover .icon { box-shadow: none; }
+    
+    & .icon { @include handsign-icon( $handsign ); }
+
+    @if
+    $handsign == rock {
+        background-image: linear-gradient(
+            colors.$rock-gradient-light,
+            colors.$rock-gradient-dark
+            );
+        } @else if
+    $handsign == paper {
+        background-image: linear-gradient(
+            colors.$paper-gradient-light,
+            colors.$paper-gradient-dark
+            );
+        } @else if
+    $handsign == scissors {
+        background-image: linear-gradient(
+            colors.$scissors-gradient-light,
+            colors.$scissors-gradient-dark
+            );
+        } @else if
+    $handsign == lizard {
+        background-image: linear-gradient(
+            colors.$lizard-gradient-light,
+            colors.$lizard-gradient-dark
+            );
+        } @else if
+    $handsign == spock {
+        background-image: linear-gradient(
+            colors.$spock-gradient-light,
+            colors.$spock-gradient-dark
+            );
+        }
+}
+
+.rock       { @include handsign( rock ); }
+.paper      { @include handsign( paper ); }
+.scissors   { @include handsign( scissors ); }
+.lizard     { @include handsign( lizard ); }
+.spock      { @include handsign( spock ); }

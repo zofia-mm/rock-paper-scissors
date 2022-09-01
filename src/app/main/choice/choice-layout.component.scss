@@ -1,0 +1,54 @@
+
+
+@mixin circular-arrangement( $radius, $items, $item-radius )
+{
+    position: relative;
+    height: 2*$radius;
+    width: 2*$radius;
+    background-color: yellow;
+
+    @if $items < 3 {
+        background-color: red;
+        & .circle-item { display: none; }
+        }
+
+    & .circle-item {
+        @include circular-arrangement-item( $radius, $items, $item-radius );
+    }
+}
+@mixin circular-arrangement-item( $radius, $items, $item-radius )
+{
+    position: absolute;
+    width: $item-radius*2;
+    height: $item-radius*2;
+    background-color: green;
+    margin: -$item-radius;
+
+    & * {
+        height: 100%;
+        width: 100%;
+        }
+}
+.circle
+{
+    @include circular-arrangement( 30vh, 3, 50px );
+}
+
+
+:host {
+    display: flex;
+    flex-flow: column;
+    }
+
+.handsign-button
+{
+    border: none;
+    border-radius: 50%;
+    display: block;
+
+    & handsign {
+        width: 80%;
+        height: 80%;
+        }
+}
+
