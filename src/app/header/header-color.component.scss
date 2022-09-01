@@ -1,0 +1,12 @@
+@use '/src/scss/colors.scss';
+
+
+:host {
+    border: 2px solid colors.$header-outline;
+    }
+
+.score-card {
+    background-color: colors.$surface;
+    color: colors.$on-surface;
+    & h1 { color: colors.$on-surface-variant; }
+    }
