@@ -32,6 +32,7 @@
 .circle
 {
     @include circular-arrangement( 30vh, 3, 50px );
+    handsign { font-size: 10px; } /* for shadow scaling */
 }
 
 

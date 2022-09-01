@@ -21,4 +21,7 @@ Is there a better way to make a component with multiple states?
 
 [class variables](https://stackoverflow.com/questions/41861319/angular2-set-css-class-to-component-variable-value)
 
-[box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+
+I'm really pround of the buttons.
+
+For buttons, at first I used [box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow); they looked great untill I started scaling. Then, after learning that shadows cannot receive percent variables, I got kinda stuck. Untill on one [SO answer](https://stackoverflow.com/a/24707461/12731017), somebody called an unblured inset shadow is border. I googled [inset circular border](), et voila!
