@@ -1,0 +1,16 @@
+@use '/src/scss/layout.scss';
+
+
+footer {
+    position: absolute;
+    bottom: 2rem;
+    }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { footer {
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    right: 0;
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { footer {
+    right: 2rem;
+    } }

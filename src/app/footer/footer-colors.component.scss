@@ -1,0 +1,8 @@
+@use '/src/scss/colors.scss';
+
+
+button {
+    background-color: transparent;
+    color: colors.$on-button;
+    border: 1px solid colors.$button-outline;
+    }
