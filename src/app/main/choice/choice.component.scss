@@ -29,9 +29,14 @@
 
 .circle-container
 {
+    background-image: url("/assets/bg-pentagon.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 90% 90%;
+
     position: relative;
-    height: 240px;
-    width: 240px;
+    height: 200px;
+    width: 200px;
     margin-top: 50px;
 
     @for $i from 1 through 5 { .circle-item-#{$i}
