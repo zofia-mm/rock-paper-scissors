@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent
 {
     MainScreenStates = MainScreenStates;
-    main_screen : MainScreenStates = MainScreenStates.Choice;
+    main_screen : MainScreenStates = MainScreenStates.Match;
 
     onChoice = () => {
         this.main_screen = MainScreenStates.Match

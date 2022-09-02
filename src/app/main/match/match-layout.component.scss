@@ -7,59 +7,77 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: center;
     flex-grow: 1;
     width: 100%;
-    handsign { font-size: 32px; } /* for shadow scaling */
 }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { :host {
+    handsign { font-size: 12px; } /* for shadow scaling */
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { :host {
+    handsign { font-size: 32px; } /* for shadow scaling */
+    } }
+
 .picked-handsigns-container
 {
-    flex-flow: row;
     flex-grow: 1;
-    width: 100%;
-
     display: flex;
     justify-content: center;
     text-align: center;
-
-    background-color: magenta;
+    margin-top: 1%;
 }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .picked-handsigns-container {
+    width: 100%;
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { .picked-handsigns-container {
+    width: fit-content;
+    } }
 
 .picked-handsign {
+    display: flex;
     aspect-ratio: 1;
-    width: fit-content;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .picked-handsign {
+    flex-flow: column-reverse;
     width: 40%;
+    height: fit-content;
+    & p { margin-top: 20%; }
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { .picked-handsign {
-    height: 60%;
+    flex-flow: column;
+    height: 75%;
+    width: fit-content;
+    & p { margin-bottom: 15%; }
     } }
 
 .handsign-container
 {
-    aspect-ratio: 1;
+    background-color: khaki;
     position: relative;
+    aspect-ratio: 1;
 
     & handsign {
         position: absolute;
         height: 100%;
-        width: 100%;
         }
     & .handsign-background {
         position: absolute;
         border-radius: 50%;
         top: 0; bottom: 0; left: 0; right: 0;
-        margin: auto;
-        height: 80%;
-        width: 80%;
+        margin: 15%;
+        height: 75%;
+        width: 75%;
         background-color: hsla(0, 0, 0, 0.1);
         }
 }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .handsign-container {
     width: 100%;
+    height: fit-content;
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { .handsign-container {
-    height: 100%;
+    height: 80%;
+    margin: 10%;
+    width: fit-content;
     } }
 
 
