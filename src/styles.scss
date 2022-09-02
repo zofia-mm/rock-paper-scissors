@@ -4,7 +4,15 @@
 
 
 * { margin: 0; padding: 0; }
-html, body { min-height: 100%; }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1))
+{
+    html, body { min-height: 100vmax; }
+}
+@media only screen and (min-width: layout.$breakpoint-desktop)
+{
+    html, body { min-height: 100%; }
+}
+
 
 body
 {

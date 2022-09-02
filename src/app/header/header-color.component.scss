@@ -2,8 +2,8 @@
 
 
 :host {
+    height: 100%;
     border: 3px solid colors.$header-outline;
-    border-radius: 1rem;
     }
 
 .score-card {
@@ -11,3 +11,4 @@
     color: colors.$on-surface;
     & h1 { color: colors.$on-surface-variant; }
     }
+    

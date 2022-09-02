@@ -1,17 +1,29 @@
 @use 'sass:math';
+@use '/src/scss/layout.scss';
 
 
 :host
 {
     display: flex;
-    flex-flow: column;
-    handsign { font-size: 10px; } /* for shadow scaling */
+    align-items: center;
+    justify-content: center;
+    handsign { font-size: 14px; } /* for shadow scaling */
 }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { :host {
+    width: 100%;
+    height: 50%;
+    aspect-ratio: 1;
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { :host {
+    height: 100%;
+    width: 100%;
+    } }
 
 .handsign-button
 {
     border: none;
     border-radius: 50%;
+    background-color: transparent;
 }
 
 
@@ -35,16 +47,23 @@
     background-size: 90% 90%;
 
     position: relative;
-    height: 200px;
-    width: 200px;
-    margin-top: 50px;
+    aspect-ratio: 1;
 
     @for $i from 1 through 5 { .circle-item-#{$i}
     {
-        @include arrange-in-circle( 100px, 5, $i, 40px );
+        @include arrange-in-circle( 50%, 5, $i, 21% );
         & * {
             height: 100%;
             width: 100%;
             }
     } }
 }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) {
+    .circle-container { height: 60vmin; }
+    :host { padding: 12% 0; }
+    }
+@media only screen and (min-width: layout.$breakpoint-desktop) {
+    .circle-container { height: 46vh; }
+    :host { padding: 5% 0; }
+    }
+

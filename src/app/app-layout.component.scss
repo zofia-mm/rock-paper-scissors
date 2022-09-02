@@ -1,39 +1,58 @@
 @use '/src/scss/layout.scss';
 
 
+:host {
+    display: block;
+    position: relative;
+    }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { :host {
+    min-height: 100vmax;
+    } }
+
+
 header {
     margin-left: auto;
     margin-right: auto;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { header {
-    margin: 2rem;
-    margin-bottom: 0;
+    padding: 1.9rem;
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { header {
     margin-top: 3rem;
     width: 44rem;
-    } }   
+    } }
 
 /* footer */
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { footer
 {
+    display: block;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    margin: 2rem 0;
+    bottom: 2rem;
 } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { footer
 {
+    display: block;
     position: absolute;
     right: 2rem;
     bottom: 2rem;
 } }
 
-main
-{
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
-}
+main {
+    width: 100%;
+    }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { main {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { main {
+    position: relative;
+    padding-top: 4%;
+    } }
