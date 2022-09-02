@@ -1,0 +1,45 @@
+@use 'sass:math';
+
+
+:host
+{
+    display: flex;
+    flex-flow: column;
+    handsign { font-size: 10px; } /* for shadow scaling */
+}
+
+.handsign-button
+{
+    border: none;
+    border-radius: 50%;
+}
+
+
+@mixin arrange-in-circle( $radius, $items-count, $item-index, $item-radius )
+{
+    position: absolute;
+    margin: -$item-radius;
+    height: 2*$item-radius;
+    width: 2*$item-radius;
+
+    $angle: 360deg / $items-count * ($item-index - 1);
+    top: $radius * math.cos( 180deg - $angle ) + $radius;
+    left: $radius * math.sin( 180deg - $angle ) + $radius;
+}
+
+.circle-container
+{
+    position: relative;
+    height: 240px;
+    width: 240px;
+    margin-top: 50px;
+
+    @for $i from 1 through 5 { .circle-item-#{$i}
+    {
+        @include arrange-in-circle( 100px, 5, $i, 40px );
+        & * {
+            height: 100%;
+            width: 100%;
+            }
+    } }
+}

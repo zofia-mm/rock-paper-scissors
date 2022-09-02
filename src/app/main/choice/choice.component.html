@@ -1,14 +1,28 @@
 
-
-<div class="circle">
-    <div class="circle-item">
+<div class="circle-container">
+    <div class="circle-item-1">
         <button class="handsign-button" (click)="onChoice()">
-            <handsign></handsign>
+            <handsign [handsign]="Handsign.Scissors"></handsign>
         </button>
     </div>
-    <div class="circle-item">
+    <div class="circle-item-2">
         <button class="handsign-button" (click)="onChoice()">
-            <handsign></handsign>
+            <handsign [handsign]="Handsign.Paper"></handsign>
+        </button>
+    </div>
+    <div class="circle-item-3">
+        <button class="handsign-button" (click)="onChoice()">
+            <handsign [handsign]="Handsign.Rock"></handsign>
+        </button>
+    </div>
+    <div class="circle-item-4">
+        <button class="handsign-button" (click)="onChoice()">
+            <handsign [handsign]="Handsign.Lizard"></handsign>
+        </button>
+    </div>
+    <div class="circle-item-5">
+        <button class="handsign-button" (click)="onChoice()">
+            <handsign [handsign]="Handsign.Spock"></handsign>
         </button>
     </div>
 </div>

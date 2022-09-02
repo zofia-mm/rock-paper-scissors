@@ -23,5 +23,13 @@ Is there a better way to make a component with multiple states?
 
 
 I'm really pround of the buttons.
-
 For buttons, at first I used [box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow); they looked great untill I started scaling. Then, after learning that shadows cannot receive percent variables, I got kinda stuck. Untill on one [SO answer](https://stackoverflow.com/a/24707461/12731017), somebody called an unblured inset shadow is border. I googled [inset circular border](), et voila!
+
+Since there won't be more buttons, I decided to hand-calculate their position instead of using a neat equasion, since I don't want to risk it recalculating a lot.
+
+for sass; used official documentation, but this really helped me
+https://www.gavsblog.com/blog/for-each-while-loops-sass-scss
+
+[iterating throungh a typescript enum](https://stackoverflow.com/questions/38554562/how-can-i-use-ngfor-to-iterate-over-typescript-enum-as-an-array-of-strings)
+
+Naming the classes - I read wikipedia on RPS to come up with handsign.
