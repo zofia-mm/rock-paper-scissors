@@ -9,11 +9,11 @@
         </div>
     </div>
 
-    <div class="match-result-between" *ngIf="match_ended">
-        <div class="match-result">
+    <div class="match-result-between">
+        <div class="match-result" *ngIf="match_ended">
             <p>{{ result_text }}</p>
+            <button>Play Again</button>
         </div>
-        <button>Play Again</button>
     </div>
 
     <div class="picked-handsign">
@@ -26,9 +26,9 @@
 
 </div>
 
-<div class="match-result-under" *ngIf="match_ended">
-    <div class="match-result">
+<div class="match-result-under">
+    <div class="match-result" *ngIf="match_ended">
         <p>{{ result_text }}</p>
+        <button>Play Again</button>
     </div>
-    <button>Play Again</button>
 </div>

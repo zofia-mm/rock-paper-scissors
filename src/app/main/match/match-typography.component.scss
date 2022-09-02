@@ -5,7 +5,7 @@
 {
     & p {
         text-transform: uppercase;
-        letter-spacing: 3px;
+        
         font-weight: 600;
         max-lines: 1;
         white-space: nowrap;
@@ -14,7 +14,9 @@
 
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .picked-handsign { & p {
     font-size: 14px;
+    letter-spacing: 2px;
     } } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { .picked-handsign { & p {
     font-size: 24px;
+    letter-spacing: 3px;
     } } }

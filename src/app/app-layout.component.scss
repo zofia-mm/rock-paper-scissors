@@ -19,8 +19,8 @@ header {
     margin-right: auto;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { header {
-    padding: 4%;
-    width: 92%;
+    padding: 8%;
+    width: 84%;
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { header {
     padding-top: 3rem;
