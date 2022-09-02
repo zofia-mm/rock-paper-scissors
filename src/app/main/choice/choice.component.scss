@@ -4,26 +4,30 @@
 
 :host
 {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     handsign { font-size: 14px; } /* for shadow scaling */
 }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { :host {
-    width: 100%;
     height: 50%;
     aspect-ratio: 1;
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { :host {
     height: 100%;
-    width: 100%;
     } }
 
 .handsign-button
 {
     border: none;
-    border-radius: 50%;
     background-color: transparent;
+
+    & handsign:hover
+    {
+        box-shadow: none;
+        font-size: 0; /* for shadow scaling */
+    }
 }
 
 

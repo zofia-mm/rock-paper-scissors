@@ -2,7 +2,8 @@
 
 
 :host {
-    display: block;
+    display: flex;
+    flex-flow: column;
     position: relative;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { :host {
@@ -18,7 +19,8 @@ header {
     margin-right: auto;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { header {
-    padding: 1.9rem;
+    padding: 4%;
+    width: 92%;
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { header {
     padding-top: 3rem;
@@ -45,13 +47,14 @@ header {
 } }
 
 main {
+    display: flex;
+    flex-grow: 1;
     width: 100%;
+    height: 100%;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { main {
     position: absolute;
     top: 0;
-    height: 100%;
-    display: flex;
     align-items: center;
     justify-items: center;
     } }

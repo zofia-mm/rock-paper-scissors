@@ -1,0 +1,73 @@
+@use '/src/scss/layout.scss';
+@use '/src/scss/colors.scss';
+
+
+:host
+{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    handsign { font-size: 32px; } /* for shadow scaling */
+}
+.picked-handsigns-container
+{
+    flex-flow: row;
+    flex-grow: 1;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    background-color: magenta;
+}
+
+.picked-handsign {
+    aspect-ratio: 1;
+    width: fit-content;
+    }
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .picked-handsign {
+    width: 40%;
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { .picked-handsign {
+    height: 60%;
+    } }
+
+.handsign-container
+{
+    aspect-ratio: 1;
+    position: relative;
+
+    & handsign {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        }
+    & .handsign-background {
+        position: absolute;
+        border-radius: 50%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin: auto;
+        height: 80%;
+        width: 80%;
+        background-color: hsla(0, 0, 0, 0.1);
+        }
+}
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .handsign-container {
+    width: 100%;
+    } }
+@media only screen and (min-width: layout.$breakpoint-desktop) { .handsign-container {
+    height: 100%;
+    } }
+
+
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1))
+{
+    .match-result-between { display: none; }
+}
+@media only screen and (min-width: layout.$breakpoint-desktop)
+{
+    .match-result-under { display: none; }
+}

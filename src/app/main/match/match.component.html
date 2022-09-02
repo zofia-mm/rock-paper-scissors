@@ -1,4 +1,34 @@
 
-Hi, I'm Match.
+<div class="picked-handsigns-container">
 
-<button>ok</button>
+    <div class="picked-handsign">
+        <p>You Picked</p>
+        <div class="handsign-container">
+            <div class="handsign-background"></div>
+            <handsign [handsign]="Handsign.Rock"></handsign>
+        </div>
+    </div>
+
+    <div class="match-result-between" *ngIf="match_ended">
+        <div class="match-result">
+            <p>{{ result_text }}</p>
+        </div>
+        <button>Play Again</button>
+    </div>
+
+    <div class="picked-handsign">
+        <p>The House Picked</p>
+        <div class="handsign-container">
+            <div class="handsign-background"></div>
+            <handsign [handsign]="Handsign.Lizard" *ngIf="house_picked"></handsign>
+        </div>
+    </div>
+
+</div>
+
+<div class="match-result-under" *ngIf="match_ended">
+    <div class="match-result">
+        <p>{{ result_text }}</p>
+    </div>
+    <button>Play Again</button>
+</div>
