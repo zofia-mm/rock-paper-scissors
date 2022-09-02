@@ -33,18 +33,15 @@
     width: fit-content;
     } }
 
-.picked-handsign {
-    display: flex;
-    aspect-ratio: 1;
-    }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { .picked-handsign {
+    display: flex;
     flex-flow: column-reverse;
     width: 40%;
     height: fit-content;
     & p { margin-top: 20%; }
     } }
 @media only screen and (min-width: layout.$breakpoint-desktop) { .picked-handsign {
-    flex-flow: column;
+    aspect-ratio: 1;
     height: 75%;
     width: fit-content;
     & p { margin-bottom: 15%; }
@@ -52,7 +49,6 @@
 
 .handsign-container
 {
-    background-color: khaki;
     position: relative;
     aspect-ratio: 1;
 
