@@ -3,7 +3,7 @@
 
 <main [ngSwitch]='main_screen'>
     <choice *ngSwitchCase="MainScreenStates.Choice" [onChoice]="onChoice"></choice>
-    <match *ngSwitchCase="MainScreenStates.Match"></match>
+    <match *ngSwitchCase="MainScreenStates.Match" [player_handsign]="player_handsign" ></match>
 </main>
 
 <footer> <footer-content></footer-content> </footer>

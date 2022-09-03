@@ -12,6 +12,7 @@ import { Handsign } from "../handsign/handsign.component";
 export class MatchComponent
 {
     Handsign = Handsign;
+    @Input() player_handsign = Handsign.Rock;
 
     @Input() did_win : boolean = false;
     @Input() house_picked : boolean = true;

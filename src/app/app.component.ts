@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Handsign } from './main/handsign/handsign.component';
 
 @Component({
     selector: 'app-root',
@@ -8,11 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent
 {
     MainScreenStates = MainScreenStates;
-    main_screen : MainScreenStates = MainScreenStates.Match;
+    main_screen : MainScreenStates = MainScreenStates.Choice;
 
-    onChoice = () => {
+    player_handsign : Handsign = Handsign.Rock;
+
+    onChoice = (handsign : Handsign) => {
         this.main_screen = MainScreenStates.Match
-        console.log( this.main_screen == MainScreenStates.Match )
+        this.player_handsign = handsign;
+        console.log( handsign );
         }
 }
 

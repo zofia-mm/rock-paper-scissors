@@ -10,5 +10,5 @@ export class ChoiceComponent
 {
     Handsign = Handsign;
     
-    @Input() onChoice : ()=>void = () => {};
+    @Input() onChoice : ( handsign : Handsign ) => void = () => {};
 }
