@@ -1,0 +1,81 @@
+@use '/src/scss/colors.scss';
+@use '/src/scss/layout.scss';
+
+
+:host
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button { background-color: transparent; }
+
+.card
+{
+    background-color: colors.$surface;
+    padding: 2.5%;
+    padding-bottom: 3%;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.rules-top-desktop
+{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 5%;
+}
+
+.rules-bottom-mobile
+{
+    width: fit-content;
+}
+
+
+@media only screen and (max-width: (layout.$breakpoint-desktop - 1))
+{
+    .rules-top-desktop { display: none; }
+    .card
+    {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+
+        & > * {
+            margin: 0 5%;
+            margin-bottom: 30%;
+            }
+        & *:last-child {
+            margin-bottom: 0;
+            }
+    }
+
+    .rules-image-container
+    {
+        & img { width: 100%; }
+    }
+}
+@media only screen and (min-width: layout.$breakpoint-desktop)
+{
+    .rules-top-mobile, .rules-bottom-mobile { display: none; }
+}
+
+/* typography */
+.rules-text
+{
+    color: colors.$on-surface;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}

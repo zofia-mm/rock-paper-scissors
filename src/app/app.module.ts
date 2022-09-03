@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatchComponent } from './main/match/match.component';
 import { HandsignComponent } from './main/handsign/handsign.component';
 import { WinnerCirclesComponent } from './main/winner-circles/winner-circles.component';
+import { RulesModalComponent } from './rules-modal/rules-modal.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WinnerCirclesComponent } from './main/winner-circles/winner-circles.com
     ChoiceComponent,
     MatchComponent,
     HandsignComponent,
-    WinnerCirclesComponent
+    WinnerCirclesComponent,
+    RulesModalComponent
   ],
   imports: [
     BrowserModule,
