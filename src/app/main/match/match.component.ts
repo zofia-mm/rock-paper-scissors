@@ -1,7 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { Handsign } from "../handsign/handsign.component";
-import { trigger, style, animate, transition, state,
-    group, query, animateChild, keyframes } from '@angular/animations';
+import { trigger } from '@angular/animations';
 import { expandBelowAnimation, expandInbetweenAnimation, ResultAnimationState } from "./match-animations.component";
 
 @Component({

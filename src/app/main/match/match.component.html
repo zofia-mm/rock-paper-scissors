@@ -10,7 +10,7 @@
     </div>
 
     <div class="match-result-between">
-        <div class="match-result" *ngIf="has_match_ended" [@resultBetweenAnimation]="resultBetweenAnimationStatus">
+        <div class="match-result" [hidden]="!has_match_ended" [@resultBetweenAnimation]="resultBetweenAnimationStatus">
             <p>{{ match_result_text }}</p>
             <button (click)="onPlayAgain()">Play Again</button>
         </div>
@@ -27,7 +27,7 @@
 </div>
 
 <div class="match-result-under">
-    <div class="match-result" *ngIf="has_match_ended" [@resultBelowAnimation]="resultBelowAnimationStatus">
+    <div class="match-result" [hidden]="!has_match_ended" [@resultBelowAnimation]="resultBelowAnimationStatus">
         <p>{{ match_result_text }}</p>
         <button (click)="onPlayAgain()">Play Again</button>
     </div>

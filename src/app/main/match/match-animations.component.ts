@@ -1,5 +1,4 @@
-import { trigger, style, animate, transition, state,
-    group, query, animateChild, keyframes } from '@angular/animations';
+import { style, animate, transition, state, keyframes } from '@angular/animations';
 
 
 export enum ResultAnimationState { Start='start', End='end' };

@@ -47,3 +47,5 @@ for persisting the score.
 
 [did some simple animations](https://angular.io/guide/animations)
 [with additional guide](https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular)
+
+[my animation wasn't applying after hoisting it's variables, beacaouse it left the dom](https://stackoverflow.com/a/36417971/12731017)

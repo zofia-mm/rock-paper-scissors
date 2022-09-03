@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 import { Handsign } from './main/handsign/handsign.component';
 import { CookieService } from 'ngx-cookie-service';
-import { ResultAnimationState } from './main/match/match-animations.component';
+import { trigger } from '@angular/animations';
+import { expandBelowAnimation, expandInbetweenAnimation, ResultAnimationState } from "./main/match/match-animations.component";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app-layout.component.scss']
+    styleUrls: ['./app-layout.component.scss'],
+    animations: [
+        trigger( 'resultBetweenAnimation', expandInbetweenAnimation ),
+        trigger( 'resultBelowAnimation', expandBelowAnimation )
+        ]
     })
 export class AppComponent
 {
@@ -70,6 +75,8 @@ export class AppComponent
         this.main_screen = MainScreenStates.Choice;
         this.has_house_picked = false;
         this.has_match_ended = false;
+        this.resultBetweenAnimationStatus = ResultAnimationState.Start;
+        this.resultBelowAnimationStatus = ResultAnimationState.Start;    
     }
 
     /* cookie */
