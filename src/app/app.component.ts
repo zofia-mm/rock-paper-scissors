@@ -25,7 +25,7 @@ export class AppComponent
         this.main_screen = MainScreenStates.Match
         this.player_handsign = handsign;
 
-        setTimeout(() => { this.onHousePicked() }, 1000);
+        setTimeout(() => { this.onHousePicked() }, 500);
     }
 
     has_house_picked : boolean = false;
@@ -37,7 +37,7 @@ export class AppComponent
         this.house_handsign = Object.values( Handsign )
             [Math.floor(Math.random() * Object.values( Handsign ).length )];
         this.has_house_picked = true;
-        setTimeout(() => { this.onMatchEnd() }, 1000);
+        setTimeout(() => { this.onMatchEnd() }, 500);
     }
 
     resultBetweenAnimationStatus = ResultAnimationState.Start;
