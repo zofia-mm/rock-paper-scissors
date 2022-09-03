@@ -14,8 +14,8 @@ export class MatchComponent
     Handsign = Handsign;
 
     @Input() did_win : boolean = false;
-    @Input() house_picked : boolean = false;
-    @Input() match_ended : boolean = false;
+    @Input() house_picked : boolean = true;
+    @Input() match_ended : boolean = true;
 
     result_text = "You Win";
 }
