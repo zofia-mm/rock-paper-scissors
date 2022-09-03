@@ -1,0 +1,24 @@
+
+<div class="circle"
+    [@circleAnimation] = "{
+        value: animationState,
+        params: { expanded:'42%', contracted:'40%' }
+        }"
+    (@circleAnimation.done) = "onAnimationDone()"
+></div>
+
+<div class="circle"
+    [@circleAnimation] = "{
+        value: animationState,
+        params: { expanded:'92%', contracted:'90%' }
+        }"
+    (@circleAnimation.done) = "onAnimationDone()"
+></div>
+
+<div class="circle"
+    [@circleAnimation] = "{
+        value: animationState,
+        params: { expanded:'152%', contracted:'150%' }
+        }"
+    (@circleAnimation.done) = "onAnimationDone()"
+></div>

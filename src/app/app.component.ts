@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Handsign } from './main/handsign/handsign.component';
 import { CookieService } from 'ngx-cookie-service';
 import { trigger } from '@angular/animations';
-import { expandBelowAnimation, expandInbetweenAnimation, ResultAnimationState } from "./main/match/match-animations.component";
+import { expandBelowAnimation, expandInbetweenAnimation, ResultAnimationState } from "./main/match/match-animation.component";
 
 @Component({
     selector: 'app-root',
@@ -42,6 +42,7 @@ export class AppComponent
 
     resultBetweenAnimationStatus = ResultAnimationState.Start;
     resultBelowAnimationStatus = ResultAnimationState.Start;
+    playerWon = false;
     onMatchEnd = () =>
     {
         this.calculateMatchResult();
@@ -62,11 +63,13 @@ export class AppComponent
         {
             this.match_result_text = "You Win";
             this.score += 1;
+            this.playerWon = true;
         }
         else
         {
             this.match_result_text = "You Lose";
             this.score -= 1;
+            this.playerWon = false;
         }
     }
 

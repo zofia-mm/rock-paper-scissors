@@ -49,3 +49,5 @@ for persisting the score.
 [with additional guide](https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular)
 
 [my animation wasn't applying after hoisting it's variables, beacaouse it left the dom](https://stackoverflow.com/a/36417971/12731017)
+
+[continous animation](https://stackoverflow.com/questions/47396509/repeat-animation-angular-4)

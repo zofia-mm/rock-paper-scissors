@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MatchComponent } from './main/match/match.component';
 import { HandsignComponent } from './main/handsign/handsign.component';
+import { WinnerCirclesComponent } from './main/winner-circles/winner-circles.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HandsignComponent } from './main/handsign/handsign.component';
     FooterComponent,
     ChoiceComponent,
     MatchComponent,
-    HandsignComponent
+    HandsignComponent,
+    WinnerCirclesComponent
   ],
   imports: [
     BrowserModule,

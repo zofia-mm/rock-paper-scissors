@@ -4,6 +4,7 @@
     <div class="picked-handsign">
         <p>You Picked</p>
         <div class="handsign-container">
+            <winner-circles *ngIf="has_match_ended && playerWon"></winner-circles>
             <div class="handsign-background"></div>
             <handsign [handsign]="player_handsign"></handsign>
         </div>
@@ -19,6 +20,7 @@
     <div class="picked-handsign">
         <p>The House Picked</p>
         <div class="handsign-container">
+            <winner-circles *ngIf="has_match_ended && !playerWon"></winner-circles>
             <div class="handsign-background"></div>
             <handsign [handsign]="house_handsign" *ngIf="has_house_picked"></handsign>
         </div>
