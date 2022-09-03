@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Handsign } from './main/handsign/handsign.component';
 import { CookieService } from 'ngx-cookie-service';
+import { ResultAnimationState } from './main/match/match-animations.component';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class AppComponent
 {
     MainScreenStates = MainScreenStates;
-    main_screen : MainScreenStates = MainScreenStates.Match;
+    main_screen : MainScreenStates = MainScreenStates.Choice;
 
     player_handsign : Handsign = Handsign.Rock;
     house_handsign : Handsign = Handsign.Rock; 
@@ -22,8 +23,8 @@ export class AppComponent
         setTimeout(() => { this.onHousePicked() }, 1000);
     }
 
-    has_house_picked : boolean = true;
-    has_match_ended : boolean = true;
+    has_house_picked : boolean = false;
+    has_match_ended : boolean = false;
     match_result_text : string = "YOU WIN";
     score = 0;
     onHousePicked = () =>
@@ -34,11 +35,15 @@ export class AppComponent
         setTimeout(() => { this.onMatchEnd() }, 1000);
     }
 
+    resultBetweenAnimationStatus = ResultAnimationState.Start;
+    resultBelowAnimationStatus = ResultAnimationState.Start;
     onMatchEnd = () =>
     {
         this.calculateMatchResult();
         this.has_match_ended = true;
-        this.cookieService.set( this.scoreCookieKey, this.score.toString() )
+        this.cookieService.set( this.scoreCookieKey, this.score.toString() );
+        this.resultBetweenAnimationStatus = ResultAnimationState.End;
+        this.resultBelowAnimationStatus = ResultAnimationState.End;
     }
     calculateMatchResult = () =>
     {

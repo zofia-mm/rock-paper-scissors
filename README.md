@@ -46,3 +46,4 @@ for persisting the score.
 [turning strings into numbers](https://stackoverflow.com/questions/14667713/how-to-convert-a-string-to-number-in-typescript)
 
 [did some simple animations](https://angular.io/guide/animations)
+[with additional guide](https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular)

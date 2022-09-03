@@ -2,6 +2,7 @@ import { Component, Input } from "@angular/core";
 import { Handsign } from "../handsign/handsign.component";
 import { trigger, style, animate, transition, state,
     group, query, animateChild, keyframes } from '@angular/animations';
+import { expandBelowAnimation, expandInbetweenAnimation, ResultAnimationState } from "./match-animations.component";
 
 @Component({
     selector: 'match',
@@ -9,6 +10,10 @@ import { trigger, style, animate, transition, state,
     styleUrls: [
         './match-layout.component.scss',
         './match-typography.component.scss'
+        ],
+    animations: [
+        trigger( 'resultBetweenAnimation', expandInbetweenAnimation ),
+        trigger( 'resultBelowAnimation', expandBelowAnimation )
         ]
     })
 export class MatchComponent
@@ -23,4 +28,7 @@ export class MatchComponent
 
     @Input() match_result_text = "You Win";
     @Input() onPlayAgain : ()=>void = ()=>{};
+
+    @Input() resultBetweenAnimationStatus : ResultAnimationState = ResultAnimationState.Start;
+    @Input() resultBelowAnimationStatus : ResultAnimationState = ResultAnimationState.Start;
 }
