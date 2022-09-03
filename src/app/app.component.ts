@@ -31,6 +31,11 @@ export class AppComponent
         this.house_handsign = Object.values( Handsign )
             [Math.floor(Math.random() * Object.values( Handsign ).length )];
         this.has_house_picked = true;
+        setTimeout(() => { this.onMatchEnd() }, 1000);
+    }
+
+    onMatchEnd = () =>
+    {
         this.calculateMatchResult();
         this.has_match_ended = true;
         this.cookieService.set( this.scoreCookieKey, this.score.toString() )
