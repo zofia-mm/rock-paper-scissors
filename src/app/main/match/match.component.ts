@@ -1,5 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { Handsign } from "../handsign/handsign.component";
+import { trigger, style, animate, transition, state,
+    group, query, animateChild, keyframes } from '@angular/animations';
 
 @Component({
     selector: 'match',
@@ -22,8 +24,3 @@ export class MatchComponent
     @Input() match_result_text = "You Win";
     @Input() onPlayAgain : ()=>void = ()=>{};
 }
-
-/*
-You Win
-You Lose
-*/

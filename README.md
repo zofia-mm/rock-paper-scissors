@@ -44,3 +44,5 @@ I instinctually (from using internet) knew, to use
 for persisting the score.
 
 [turning strings into numbers](https://stackoverflow.com/questions/14667713/how-to-convert-a-string-to-number-in-typescript)
+
+[did some simple animations](https://angular.io/guide/animations)

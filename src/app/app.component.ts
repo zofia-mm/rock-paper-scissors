@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class AppComponent
 {
     MainScreenStates = MainScreenStates;
-    main_screen : MainScreenStates = MainScreenStates.Choice;
+    main_screen : MainScreenStates = MainScreenStates.Match;
 
     player_handsign : Handsign = Handsign.Rock;
     house_handsign : Handsign = Handsign.Rock; 
@@ -22,9 +22,9 @@ export class AppComponent
         setTimeout(() => { this.onHousePicked() }, 1000);
     }
 
-    has_house_picked : boolean = false;
-    has_match_ended : boolean = false;
-    match_result_text : string = "";
+    has_house_picked : boolean = true;
+    has_match_ended : boolean = true;
+    match_result_text : string = "YOU WIN";
     score = 0;
     onHousePicked = () =>
     {
