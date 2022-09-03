@@ -10,9 +10,9 @@
     </div>
 
     <div class="match-result-between">
-        <div class="match-result" *ngIf="match_ended">
-            <p>{{ result_text }}</p>
-            <button>Play Again</button>
+        <div class="match-result" *ngIf="has_match_ended">
+            <p>{{ match_result_text }}</p>
+            <button (click)="onPlayAgain()">Play Again</button>
         </div>
     </div>
 
@@ -20,15 +20,15 @@
         <p>The House Picked</p>
         <div class="handsign-container">
             <div class="handsign-background"></div>
-            <handsign [handsign]="Handsign.Lizard" *ngIf="house_picked"></handsign>
+            <handsign [handsign]="house_handsign" *ngIf="has_house_picked"></handsign>
         </div>
     </div>
 
 </div>
 
 <div class="match-result-under">
-    <div class="match-result" *ngIf="match_ended">
-        <p>{{ result_text }}</p>
-        <button>Play Again</button>
+    <div class="match-result" *ngIf="has_match_ended">
+        <p>{{ match_result_text }}</p>
+        <button (click)="onPlayAgain()">Play Again</button>
     </div>
 </div>

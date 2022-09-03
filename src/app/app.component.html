@@ -1,9 +1,20 @@
 
-<header> <header-content score="12"></header-content> </header>
+<header> <header-content score="{{score}}"></header-content> </header>
 
 <main [ngSwitch]='main_screen'>
-    <choice *ngSwitchCase="MainScreenStates.Choice" [onChoice]="onChoice"></choice>
-    <match *ngSwitchCase="MainScreenStates.Match" [player_handsign]="player_handsign" ></match>
+    <choice
+        *ngSwitchCase="MainScreenStates.Choice" 
+        [onChoice]="onChoice"
+    ></choice>
+    <match
+        *ngSwitchCase="MainScreenStates.Match"
+        [player_handsign]="player_handsign"
+        [house_handsign]="house_handsign"
+        [has_house_picked]="has_house_picked"
+        [match_result_text]="match_result_text"
+        [has_match_ended]="has_match_ended"
+        [onPlayAgain]="onPlayAgain"
+    ></match>
 </main>
 
 <footer> <footer-content></footer-content> </footer>

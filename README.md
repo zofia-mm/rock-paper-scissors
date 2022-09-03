@@ -33,3 +33,8 @@ https://www.gavsblog.com/blog/for-each-while-loops-sass-scss
 [iterating throungh a typescript enum](https://stackoverflow.com/questions/38554562/how-can-i-use-ngfor-to-iterate-over-typescript-enum-as-an-array-of-strings)
 
 Naming the classes - I read wikipedia on RPS to come up with handsign.
+
+[sleep in angular](https://stackoverflow.com/questions/37764665/how-to-implement-sleep-function-in-typescript)
+
+[why is random enum so difficult](https://stackoverflow.com/questions/44230998/how-to-get-a-random-enum-in-typescript)
+[i used docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)

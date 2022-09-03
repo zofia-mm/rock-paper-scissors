@@ -13,12 +13,14 @@ export class MatchComponent
 {
     Handsign = Handsign;
     @Input() player_handsign = Handsign.Rock;
+    @Input() house_handsign = Handsign.Rock;
 
     @Input() did_win : boolean = false;
-    @Input() house_picked : boolean = true;
-    @Input() match_ended : boolean = true;
+    @Input() has_house_picked : boolean = false;
+    @Input() has_match_ended : boolean = false;
 
-    result_text = "You Win";
+    @Input() match_result_text = "You Win";
+    @Input() onPlayAgain : ()=>void = ()=>{};
 }
 
 /*
