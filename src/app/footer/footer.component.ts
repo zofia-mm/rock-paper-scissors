@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'footer-content',
@@ -9,4 +9,7 @@ import { Component } from "@angular/core";
         './footer-layout.component.scss'
         ]
     })
-export class FooterComponent {}
+export class FooterComponent
+{
+    @Input() onRulesClick : () => void = () => {};
+}

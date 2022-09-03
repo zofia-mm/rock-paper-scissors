@@ -15,6 +15,25 @@ import { expandBelowAnimation, expandInbetweenAnimation, ResultAnimationState } 
     })
 export class AppComponent
 {
+    /* modal */
+
+    isRulesModalVisible : boolean = false;
+    onRulesClick = () =>
+        { this.isRulesModalVisible = true; }
+    onRulesClose = () =>
+        { this.isRulesModalVisible = false; }
+
+    /* cookie */
+
+    scoreCookieKey = 'score'
+    constructor( private cookieService: CookieService ) { }
+    ngOnInit(): void
+    {
+        this.score = +this.cookieService.get( this.scoreCookieKey );
+    }
+
+    /* game */
+
     MainScreenStates = MainScreenStates;
     main_screen : MainScreenStates = MainScreenStates.Choice;
 
@@ -80,14 +99,6 @@ export class AppComponent
         this.has_match_ended = false;
         this.resultBetweenAnimationStatus = ResultAnimationState.Start;
         this.resultBelowAnimationStatus = ResultAnimationState.Start;    
-    }
-
-    /* cookie */
-    scoreCookieKey = 'score'
-    constructor( private cookieService: CookieService ) { }
-    ngOnInit(): void
-    {
-        this.score = +this.cookieService.get( this.scoreCookieKey );
     }
 }
 

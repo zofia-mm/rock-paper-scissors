@@ -1,7 +1,10 @@
 
 <header> <header-content score="{{score}}"></header-content> </header>
 
-<rules-modal></rules-modal>
+<rules-modal
+    *ngIf="isRulesModalVisible"
+    [onCloseClick]="onRulesClose"
+></rules-modal>
 
 <main [ngSwitch]='main_screen'>
     <choice
@@ -22,4 +25,8 @@
     ></match>
 </main>
 
-<footer> <footer-content></footer-content> </footer>
+<footer>
+    <footer-content
+        [onRulesClick] = "onRulesClick"
+    ></footer-content>
+</footer>
