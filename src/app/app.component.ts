@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Handsign } from './main/handsign/handsign.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
     selector: 'app-root',
@@ -32,6 +33,7 @@ export class AppComponent
         this.has_house_picked = true;
         this.calculateMatchResult();
         this.has_match_ended = true;
+        this.cookieService.set( this.scoreCookieKey, this.score.toString() )
     }
     calculateMatchResult = () =>
     {
@@ -58,6 +60,14 @@ export class AppComponent
         this.main_screen = MainScreenStates.Choice;
         this.has_house_picked = false;
         this.has_match_ended = false;
+    }
+
+    /* cookie */
+    scoreCookieKey = 'score'
+    constructor( private cookieService: CookieService ) { }
+    ngOnInit(): void
+    {
+        this.score = +this.cookieService.get( this.scoreCookieKey );
     }
 }
 

@@ -38,3 +38,9 @@ Naming the classes - I read wikipedia on RPS to come up with handsign.
 
 [why is random enum so difficult](https://stackoverflow.com/questions/44230998/how-to-get-a-random-enum-in-typescript)
 [i used docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+
+I instinctually (from using internet) knew, to use
+[cookies](https://stackoverflow.com/questions/34298133/angular-cookies)
+for persisting the score.
+
+[turning strings into numbers](https://stackoverflow.com/questions/14667713/how-to-convert-a-string-to-number-in-typescript)
