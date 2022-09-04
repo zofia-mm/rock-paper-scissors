@@ -5,7 +5,7 @@
     display: flex;
     flex-flow: column;
     position: relative;
-    overflow: visible clip;
+    overflow: clip;
     }
 @media only screen and (max-width: (layout.$breakpoint-desktop - 1)) { :host {
     min-height: 100vmax;

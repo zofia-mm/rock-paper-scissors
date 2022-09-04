@@ -16,7 +16,7 @@ And woah, it was a journey! 35 hours of work across 3 and a half days. My second
 - [My process](#my-process):
     - [Built with](#built-with),
     - [What I learned](#what-i-learned):
-        - [Angular/TypeScript](#Then-I-needed-a-lot-info-on-Angular-/-TypeScript:),
+        - [Angular/TypeScript](#Then-I-needed-a-lot-info-on-Angular--TypeScript:),
         - [SCSS](#And-then-there-was-SCSS-Styling;);
     - [Continued development](#Continued-development).
 
@@ -33,6 +33,19 @@ Users should be able to:
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 ### Solution
+
+Check it out live [here]()!
+
+Or the next best thing - this gif:
+![](./readme/video-rpsls.gif)
+
+| Desktop |
+| --- |
+| ![](./readme/screenshot-desktop.png) |
+
+| Mobile |
+| --- |
+| ![](./readme/screenshot-mobile.png) |
 
 <!-- remember about screenies! -->
 
