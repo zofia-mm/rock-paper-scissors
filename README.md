@@ -15,9 +15,7 @@ And woah, it was a journey! 35 hours of work across 3 and a half days. My second
 
 - [My process](#my-process):
     - [Built with](#built-with),
-    - [What I learned](#what-i-learned):
-        - [Angular/TypeScript](#Then-I-needed-a-lot-info-on-Angular--TypeScript:),
-        - [SCSS](#And-then-there-was-SCSS-Styling;);
+    - [What I learned](#what-i-learned),
     - [Continued development](#Continued-development).
 
 
