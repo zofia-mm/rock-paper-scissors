@@ -22,19 +22,19 @@
 
         @if
     $handsign == rock {
-        background-image: url('/assets/icon-rock.svg');
+        background-image: url(../../../assets/icon-rock.svg);
         } @else if
     $handsign == paper {
-        background-image: url('/assets/icon-paper.svg');
+        background-image: url(../../../assets/icon-paper.svg);
         } @else if
     $handsign == scissors {
-        background-image: url('/assets/icon-scissors.svg');
+        background-image: url(../../../assets/icon-scissors.svg);
         } @else if
     $handsign == lizard {
-        background-image: url('/assets/icon-lizard.svg');
+        background-image: url(../../../assets/icon-lizard.svg);
         } @else if
     $handsign == spock {
-        background-image: url('/assets/icon-spock.svg');
+        background-image: url(../../../assets/icon-spock.svg);
         }
 }
 
