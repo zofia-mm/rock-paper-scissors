@@ -1,4 +1,4 @@
-import { style, animate, transition, state, keyframes, trigger } from '@angular/animations';
+import { style, animate, transition, state, trigger } from '@angular/animations';
 
 
 export enum CircleState { Expanded = 'expanded', Contracted = 'contracted' }
