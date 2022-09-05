@@ -32,5 +32,4 @@ export class MatchComponent
 
     @Input() playerWon : boolean = true;
     @Input() houseWon : boolean = true;
-
 }

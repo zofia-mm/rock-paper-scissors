@@ -79,6 +79,8 @@ to fully comprehend the solution.
 
 - [Cookies](https://stackoverflow.com/questions/34298133/angular-cookies) for the persisting score.
 
+- [Binding variables to aria labels](https://stackoverflow.com/questions/42658800/how-to-bind-dynamic-data-to-aria-label),
+
 - Also - this neat JS / TS trick with [turning strings into numbers](https://stackoverflow.com/questions/14667713/how-to-convert-a-string-to-number-in-typescript).
 
 #### And then there was SCSS Styling;
@@ -319,5 +321,9 @@ That said, here are parts of the code, that I'm really proud of:
     <div align="center"> <img width="50%" src="./readme/anim-rings.gif"/></div>
 
 <br>
+
+### Acknowledgments
+
+- Thanks to [@DundeeA](https://www.frontendmentor.io/profile/DundeeA) for tip about accessible button names.
 
 **I loved working on this project, and I hope it shows. Thanks for reading all the way through! :)**

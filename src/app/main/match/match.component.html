@@ -6,7 +6,7 @@
         <div class="handsign-container">
             <winner-circles *ngIf="has_match_ended && playerWon"></winner-circles>
             <div class="handsign-background"></div>
-            <handsign [handsign]="player_handsign"></handsign>
+            <handsign [handsign]="player_handsign" attr.aria-label="{{player_handsign}}"></handsign>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
         <div class="handsign-container">
             <winner-circles *ngIf="has_match_ended && houseWon"></winner-circles>
             <div class="handsign-background"></div>
-            <handsign [handsign]="house_handsign" *ngIf="has_house_picked"></handsign>
+            <handsign [handsign]="house_handsign" *ngIf="has_house_picked" attr.aria-label="{{house_handsign}}"></handsign>
         </div>
     </div>
 
