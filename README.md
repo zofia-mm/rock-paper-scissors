@@ -320,10 +320,10 @@ That said, here are parts of the code, that I'm really proud of:
 
     <div align="center"> <img width="50%" src="./readme/anim-rings.gif"/></div>
 
-<br>
-
 ### Acknowledgments
 
 - Thanks to [@DundeeA](https://www.frontendmentor.io/profile/DundeeA) for tip about accessible button names.
+
+<br>
 
 **I loved working on this project, and I hope it shows. Thanks for reading all the way through! :)**
