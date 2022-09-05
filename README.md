@@ -36,6 +36,7 @@ Check it out live [here](https://fobya7.github.io/rock-paper-scissors/)!
 Or the next best thing - this gif:
 
 <div align="center"> <img width="70%" src="./readme/in-motion.gif"/></div>
+<br>
 
 | Desktop |
 | --- |
