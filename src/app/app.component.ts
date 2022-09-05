@@ -62,6 +62,7 @@ export class AppComponent
     resultBetweenAnimationStatus = ResultAnimationState.Start;
     resultBelowAnimationStatus = ResultAnimationState.Start;
     playerWon = false;
+    houseWon = false;
     onMatchEnd = () =>
     {
         this.calculateMatchResult();
@@ -83,12 +84,14 @@ export class AppComponent
             this.match_result_text = "You Win";
             this.score += 1;
             this.playerWon = true;
+            this.houseWon = false;
         }
         else
         {
             this.match_result_text = "You Lose";
             this.score -= 1;
             this.playerWon = false;
+            this.houseWon = true;
         }
     }
 
@@ -97,6 +100,8 @@ export class AppComponent
         this.main_screen = MainScreenStates.Choice;
         this.has_house_picked = false;
         this.has_match_ended = false;
+        this.playerWon = false;
+        this.houseWon = false;
         this.resultBetweenAnimationStatus = ResultAnimationState.Start;
         this.resultBelowAnimationStatus = ResultAnimationState.Start;    
     }

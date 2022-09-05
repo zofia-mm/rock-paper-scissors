@@ -31,4 +31,6 @@ export class MatchComponent
     @Input() resultBelowAnimationStatus : ResultAnimationState = ResultAnimationState.Start;
 
     @Input() playerWon : boolean = true;
+    @Input() houseWon : boolean = true;
+
 }
