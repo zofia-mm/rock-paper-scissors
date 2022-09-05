@@ -162,6 +162,8 @@ That said, here are parts of the code, that I'm really proud of:
 
     ![](./readme/handsign-icons.png)
 
+---
+
 -   **Circular arrangment** was achieved by the power of math. It's reusable too, since you can just put in different numbers, and have for example, just three items. And maybe a little bit closer together.
 
     <table>
@@ -203,6 +205,8 @@ That said, here are parts of the code, that I'm really proud of:
     }
     ```
 
+---
+
 - **Game 'loop'** is just a series of lambda functions. (Variables they change affect gui.)
 
     After player makes a choice, this function executes, starting a domino effect.
@@ -237,6 +241,8 @@ That said, here are parts of the code, that I'm really proud of:
         this.has_match_ended = true;
     }
     ```
+
+---
 
 - **Animations** were fun to figure out. This code is for the rings that appear around winning handsign:
 
