@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Solution
 
-Check it out live [here](https://fobya7.github.io/rock-paper-scissors/)!
+Check it out live [here](https://zofia-mm.github.io/rock-paper-scissors/)!
 
 Or the next best thing - this gif:
 
